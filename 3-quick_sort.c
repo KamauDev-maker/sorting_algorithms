@@ -1,10 +1,5 @@
 #include "sort.h"
 /**
- * quick_sort - function that sorts an array using quicksort
- * @array: array
- * @size: size of array
- */
-/**
 *swap - the positions of two elements into an array
 *@array: array
 *@item1: array element
@@ -70,6 +65,11 @@ void qs(int *array, ssize_t first, ssize_t last, int size)
 		qs(array, position + 1, last, size);
 	}
 }
+/**
+  * quick_sort - function that sorts an array using quicksort
+  * @array: array
+  * @size: size of array
+  */
 void quick_sort(int *array, size_t size)
 {
 	if (!array || size < 2)
