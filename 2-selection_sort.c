@@ -20,7 +20,7 @@ void selection_sort(int *array, size_t size)
 			if (array[tmp] > array[index])
 			{
 				tmp = index;
-				flag +=1;
+				flag += 1;
 			}
 		}
 		swap = array[i];
