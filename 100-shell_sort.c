@@ -1,12 +1,14 @@
 #include "sort.h"
+
 /**
- * swap - the position of two elements into an array
- * @array: array
- * @item1: array element
- * @item2: array element
- */
+*swap - the positions of two elements into an array
+*@array: array
+*@item1: array element
+*@item2: array element
+*/
 void swap(int *array, int item1, int item2)
 {
+
 	int tmp;
 
 	tmp = array[item1];
@@ -14,13 +16,14 @@ void swap(int *array, int item1, int item2)
 	array[item2] = tmp;
 }
 /**
- * shell_sort - sort array of integers using the shell sort
- * @array: array
- * @size: size of array
+ * shell_sort - function that sorts an array of integers in ascending
+ * order using the Shell sort algorithm, using the Knuth sequence
+ * @size: size of the array
+ * @array: list with numbers
  */
 void shell_sort(int *array, size_t size)
 {
-	size_t gap = 1, 1, index = 0;
+	size_t gap = 1, i, index = 0;
 
 	if (array == NULL || size < 2)
 		return;
@@ -30,7 +33,7 @@ void shell_sort(int *array, size_t size)
 	{
 		for (i = gap; i < size; i++)
 			for (index = i; index >= gap &&
-					(array[index] < array[index - gap]); index -= gap)
+			 (array[index] < array[index - gap]); index -= gap)
 				swap(array, index, index - gap);
 		print_array(array, size);
 		gap /= 3;
